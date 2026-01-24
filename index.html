@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es"> 
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/J4FZZNV5/logo2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Kevin Ledesma & Kevin Cadena">
+    <title>Inicio</title>
+  </head>
+  <body class="antialiased pt-16">
+    
+    <!--NAVBAR-->
+  <div class="bg-white" id="top_page">
+  <header class="bg-[#1a1a1a] fixed top-0 w-full z-50">
+    <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between lg:justify-center lg:gap-x-24 p-4 lg:px-8">
+      <div class="flex">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">CONSTRUCTORA</span>
+        <img src="https://i.postimg.cc/ncWBB4bK/logo.png" alt="Logo" class="h-auto w-auto" />
+      </a>
+    </div>
+      <div class="flex lg:hidden">
+        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+          <span class="sr-only">Open main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="/index.html" class="text-sm/6 font-Montserrat font-bold text-blue-600 hover:font-semibold" target="_blank">INICIO</a>
+        <a href="/src/pages/quienes_somos.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" target="_blank">QUIÉNES SOMOS</a>
+        <div class="relative flex items-center"> <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" 
+        class="flex items-center gap-1 text-sm/6 font-Montserrat text-white hover:font-semibold bg-transparent border-none p-0 focus:outline-none" type="button">
+            PROYECTOS EN VENTA 
+            <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="dropdownDelay" class="z-10 hidden bg-[#1a1a1a] divide-y divide-gray-100 rounded-lg shadow w-44">
+            <ul class="py-2 text-sm text-white" aria-labelledby="dropdownDelayButton">
+                <li>
+                    <a href="/src/pages/proyectos/cipres.html" class="block px-4 py-2 text-white hover:font-semibold">CIPRÉS</a>
+                </li>
+                <li>
+                    <a href="/src/pages/proyectos/villa_ventura.html" class="block px-4 py-2 hover:font-semibold" target="_blank">VILLA AVENTURA</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <a href="/src/pages/contacto.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" target="_blank">CONTACTO</a>
+      </div>
+    </nav>
+    <el-dialog>
+      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#1a1a1a] p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">CONSTRUCTORA</span>
+                <img src="https://i.postimg.cc/ncWBB4bK/logo.png" alt="Logo" class="h-15 w-auto"/>
+              </a>
+              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
+                <span class="sr-only">Cerrar Menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root border-t-2 py-2">
+              <div class="-my-6 divide-y divide-white/10">
+                <div class="space-y-2 py-6">
+                  <a href="/index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold text-blue-600 hover:bg-white/5">INICIO</a>
+                  <a href="/src/pages/quienes_somos.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">QUIÉNES SOMOS</a>
+                  <div class="-mx-3">
+                    <button type="button" onclick="document.getElementById('mobile-projects-list').classList.toggle('hidden')" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 font-semibold text-white pr-3.5 text-base/7 hover:bg-white/5">PROYECTOS EN VENTA                      
+                <svg class="h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="mobile-projects-list" class="mt-2 space-y-2 hidden">
+                <a href="/src/pages/proyectos/cipres.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm text-white hover:text-white hover:bg-white/5">CIPRÉS
+                </a>
+                <a href="/src/pages/proyectos/villa_ventura.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5">VILLA AVENTURA
+                </a>
+              </div>
+            </div>
+                  <a href="/src/pages/contacto.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">CONTACTO</a>
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+  </header>
+</div>
+
+<!-- CAROUSEL -->
+<div id="gallery" class="relative w-full" data-carousel="slide">
+
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96 lg:h-[500px] xl:h-[800px]">
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://i.postimg.cc/13TBRx3z/img1.png" class="absolute block w-full h-full object-cover top-0 left-0" alt="Imagen de casa" loading="lazy">
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="https://i.postimg.cc/CKqNzvRV/img2.png" class="absolute block w-full h-full object-cover top-0 left-0" alt="Imagen de casa" loading="lazy">
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://i.postimg.cc/4395m8YR/img3.png" class="absolute block w-full h-full object-cover top-0 left-0" alt="Imagen de casa" loading="lazy">
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://i.postimg.cc/bvtTs6ZP/img4.png" class="absolute block w-full h-full object-cover top-0 left-0" alt="Imagen de casa" loading="lazy">
+        </div>
+    </div>
+
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+            <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+            <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+
+<div class="seccion1 flex flex-col lg:flex-row">
+  <div class="bg-cover bg-center order-2 lg:order-1 h-64 md:h-96 lg:h-[1024px]" style="background-image: url('https://i.postimg.cc/J0P39vF8/cipress1.jpg');">
+  </div>
+
+  <div class="contenidoS1 order-1 lg:order-2 flex items-center py-12">
+    <div class="px-8 lg:px-20 max-w-xl mx-auto">
+      
+      <h1 class="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6 font-bold">
+        Constructora Velástegui
+      </h1>
+
+      <p class="text-neutral-300 mb-8 leading-relaxed">
+        Nuestros proyectos se caracterizan por la calidad y cumplimiento,
+        convirtiéndonos una de las constructoras con más prestigio de la ciudad.
+      </p>
+
+      <a href="/src/pages/quienes_somos.html">
+        <span class="link">Más información →</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!--Ventajas-->
+<section class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+    <h2 class="text-sm uppercase tracking-widest text-gray-400 text-center mb-8 font-bold">Ventajas y Beneficios</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-start">
+      
+      <div class="flex flex-col items-center text-center max-w-[220px] mx-auto">
+        <img src="https://i.postimg.cc/8c9VDpsp/icon1.jpg" alt="icon 1" class="w-20 h-20 mb-6" loading="lazy"/>
+        <p class="text-sm text-gray-600 leading-7">
+          Contar con un socio constructor con buena reputación y más de 35 años de experiencia.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center max-w-[220px] mx-auto">
+        <img src="https://i.postimg.cc/nrgtZFMV/icon2.jpg" alt="icon 2" class="w-20 h-20 mb-6" loading="lazy"/>
+        <p class="text-sm text-gray-600 leading-7">
+          Adquirir proyectos ubicados en los sectores de mayor plusvalía de la ciudad.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center max-w-[220px] mx-auto">
+        <img src="https://i.postimg.cc/Rhyz9SqV/icon3.jpg" alt="icon 3" class="w-20 h-20 mb-6" loading="lazy"/>
+        <p class="text-sm text-gray-600 leading-7">
+          Tener un inmueble con acabados de lujo y materiales de la mejor calidad y durabilidad.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center max-w-[220px] mx-auto">
+        <img src="https://i.postimg.cc/ry0Vn3D5/icon4.jpg" alt="icon 4" class="w-20 h-20 mb-6" loading="lazy"/>
+        <p class="text-sm text-gray-600 leading-7">
+          Poseer un activo productivo que le generará valor en el tiempo.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center max-w-[220px] mx-auto">
+        <img src="https://i.postimg.cc/wBjHhGKz/icon5.jpg" alt="icon 5" class="w-20 h-20 mb-6" loading="lazy"/>
+        <p class="text-sm text-gray-600 leading-7">
+          El cumplimiento de todas las condiciones ofrecidas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+<div class="seccion1 flex flex-col lg:flex-row">
+  <div class="contenidoS1 flex items-center py-12">
+    <div class="px-8 lg:px-20 max-w-xl mx-auto">
+      
+      <h1 class="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6 font-bold">
+        Planificación, construcción, promoción y venta de casas y edificios.
+      </h1>
+
+      <p class="text-neutral-300 mb-8 leading-relaxed">
+        Buscamos satisfacer las necesidades de nuestros clientes, ofreciéndoles seriedad, calidad y cumplimiento, lo que la ha llevado a ser una de las constructoras con más prestigio de la ciudad, gracias al reconocimiento de nuestros compradores.
+      </p>
+
+    </div>
+  </div>
+
+    <div class="bg-cover bg-center h-64 md:h-96 lg:h-[500px]" style="background-image: url('https://i.postimg.cc/8PZZ7Kbj/planos.jpg');">
+  </div>
+</div>
+
+<br><br>
+
+<!--Proyectos entregado-->
+<h1 class="text-center text-2xl md:text-3xl lg:text-4xl leading-tight mb-5 font-bold">
+        Proyectos Entregados
+</h1>
+
+<div class="max-w-6xl mx-auto my-10 grid grid-cols-1 md:grid-cols-2 gap-10"> 
+
+  <div class="space-y-6">
+    <img class="w-full h-64 md:h-72 object-cover rounded" src="https://i.postimg.cc/B63xtJWV/villa-ventura1.jpg" alt="proyecto1-img1" loading="lazy"> 
+    <img class="w-full h-64 md:h-72 object-cover rounded" src="https://i.postimg.cc/4dGznXCq/villa-ventura2.jpg" alt="proyecto1-img2" loading="lazy">
+    <h3 class="text-2xl">Villa Ventura</h3>
+    <a href="/src/pages/proyectos/villa_ventura.html">
+        <span class="link">Continuar Leyendo →</span>
+    </a>
+  </div>
+
+  <div class="space-y-6 border-t md:border-t-0 md:border-l md:pl-10 pt-6 md:pt-0"> 
+    <img class="w-full h-64 md:h-72 object-cover rounded" src="https://i.postimg.cc/J0P39vF8/cipress1.jpg" alt="proyecto2-img1" loading="lazy">
+    <img class="w-full h-64 md:h-72 object-cover rounded" src="https://i.postimg.cc/WzXmQCyP/cipress2.jpg" alt="proyecto2-img2" loading="lazy">
+    <h3 class="text-2xl">Ciprés Residencias</h3>
+    <a href="/src/pages/proyectos/cipres.html">
+        <span class="link">Continuar Leyendo →</span>
+    </a>
+  </div>
+
+</div>
+
+<!--Boton volver arriba-->
+  <button 
+    type="button" 
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    class="fixed end-6 bottom-6 z-50 flex items-center justify-center w-14 h-14 text-white bg-black rounded-full hover:bg-opacity-90 focus:outline-none shadow-lg transition-transform hover:-translate-y-1">
+    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 0-7 7m7-7 7 7"/>
+    </svg>
+    <span class="sr-only">Volver arriba</span>
+</button>
+
+
+<!--Footer-->
+<footer class="bg-[#1a1a1a] mt-12">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="flex justify-center pt-8">
+            <a href="/index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="https://i.postimg.cc/J4FZZNV5/logo2.png" class="h-auto" alt="Logo"/>
+            </a>
+        </div>
+        <div class="flex justify-center pb-8 pt-8">
+            <a href="#top_page" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="https://i.postimg.cc/BQzHHT9c/volver.png" class="h-auto" alt="volver" width="40px"/>
+            </a>
+        </div>
+        <p class="text-center text-white text-sm">Av. 6 de Diciembre y Bossano. Quito, Ecuador.</p> 
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-body text-center text-white">© 2026 <a href="/index.html" class="hover:underline">Constructora</a>. Todos los derechos reservados. Powered by <a href="https://www.alfadigital.com.ec/" target="_blank" >Alfa Digital S.A</a></span>
+    </div>
+</footer>
+
+
+    <!--Enlace al main.js-->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

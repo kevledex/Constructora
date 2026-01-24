@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.seccion1{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 100vh;
+}
+
+@media (min-width: 1024px) { 
+    .seccion1 {
+    grid-template-columns: 1fr 1fr; 
+    }
+}
+
+
+.contenidoS1{
+    display: flex;
+    align-items: center;
+    background-color: #171717;
+    color: white;
+}
+
+.seccion2{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 100vh;
+}
+
+@media (min-width: 1024px) { 
+    .seccion2 {
+    grid-template-columns: 1fr 1fr; 
+    }
+}
+
+.contenidoS2{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+
+.link{
+    color: #00aae4;;
+}
