@@ -1,0 +1,129 @@
+[
+
+    {
+        
+        "nombre": "Manto Verde Casa",
+        "precio inicial": 541.385,
+        "ubicacion": "Manto Verde",
+        "tipo": "Casas",
+        "imagen":"https://i.postimg.cc/jSPHSKjq/casa1.webp"
+
+    },
+
+    {
+        
+        "nombre": "Muskuna",
+        "precio inicial": 173.000,
+        "ubicacion": "Muskuna, Puembo",
+        "tipo": "Casas",
+        "imagen":"https://i.postimg.cc/cLwRLZJd/casa2.jpg"
+
+    },
+
+    {
+        
+        "nombre": "Sendero",
+        "precio inicial": 335.000,
+        "ubicacion": "Sendero Residencias",
+        "tipo": "Casas",
+        "imagen":"https://i.postimg.cc/W1y1CJV7/casa3.webp"
+
+    },
+
+
+    {
+        
+        "nombre": "ZADEH",
+        "precio inicial": 541.682,
+        "ubicacion": "ZADEH, De las Golondrinas y Huirachuro, Monteserrín",
+        "tipo": "Casas",
+        "imagen":"https://i.postimg.cc/kGwnc2wr/casa4.jpg"
+
+    },
+
+
+    {
+        
+        "nombre": "Amira",
+        "precio inicial": 128.558,
+        "ubicacion": "Amira San Francisco, Quito",
+        "tipo": "Departamentos",
+        "imagen":"https://i.postimg.cc/8cb0fW4b/depa1.jpg"
+
+    },
+
+    {
+        
+        "nombre": "Mozione",
+        "precio inicial": 279.670,
+        "ubicacion": "Mozione Hidalgo de Pinto, Quito",
+        "tipo": "Departamentos",
+        "imagen":"https://i.postimg.cc/Wz7Hqr8n/depa2.webp"
+
+    },
+
+
+
+    {
+        
+        "nombre": "Sense",
+        "precio inicial": 192.735,
+        "ubicacion": "Edificio SENSE",
+        "tipo": "Departamentos",
+        "imagen":"https://i.postimg.cc/D0cM4s65/depa3.webp"
+
+    },
+
+
+    {
+        
+        "nombre": "QUIARI",
+        "precio inicial": 130.686,
+        "ubicacion": "QUIARI, San Juan de Cumbayá",
+        "tipo": "Departamentos",
+        "imagen":"https://i.postimg.cc/1XKjV6Bv/depa4.webp"
+
+    },
+
+    {
+        
+        "nombre": "Oficinas Zaigen",
+        "precio inicial": 199.076,
+        "ubicacion": "Edificio Zaigen",
+        "tipo": "Oficinas",
+        "imagen":"https://i.postimg.cc/XJf2tFR0/ofi1.jpg"
+
+    },
+
+        {
+        
+        "nombre": "Oficinas en La Carolina",
+        "precio inicial": 90.594,
+        "ubicacion": "Centro Norte de Quito",
+        "tipo": "Oficinas",
+        "imagen":"https://i.postimg.cc/tRzS53dW/ofi2.webp"
+
+    },
+
+            {
+        
+        "nombre": "Prados del Llano",
+        "precio inicial": 79.493,
+        "ubicacion": "Prados del Llano",
+        "tipo": "Lotes",
+        "imagen":"https://i.postimg.cc/vZC3B3yJ/lote1.jpg"
+
+    },
+
+                {
+        
+        "nombre": "Zibâ",
+        "precio inicial": 224.000,
+        "ubicacion": "Calle Humberto Fierro S5-110, Cumbaya",
+        "tipo": "Departamentos",
+        "imagen":"https://i.postimg.cc/t482T2y0/depa5.webp"
+
+    }
+
+
+] 
