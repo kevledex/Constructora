@@ -1,129 +1,86 @@
 [
-
     {
-        
         "nombre": "Manto Verde Casa",
-        "precio": 541.385,
+        "precio": 50000,
         "ubicacion": "Manto Verde",
         "tipo": "Casas",
-        "imagen":"https://i.postimg.cc/jSPHSKjq/casa1.webp"
-
+        "imagen": "https://i.postimg.cc/jSPHSKjq/casa1.webp"
     },
-
     {
-        
         "nombre": "Muskuna",
-        "precio": 173.402,
+        "precio": 25000,
         "ubicacion": "Muskuna, Puembo",
         "tipo": "Casas",
-        "imagen":"https://i.postimg.cc/cLwRLZJd/casa2.jpg"
-
+        "imagen": "https://i.postimg.cc/cLwRLZJd/casa2.jpg"
     },
-
     {
-        
         "nombre": "Sendero",
-        "precio": 335.234,
+        "precio": 35000,
         "ubicacion": "Sendero Residencias",
         "tipo": "Casas",
-        "imagen":"https://i.postimg.cc/W1y1CJV7/casa3.webp"
-
+        "imagen": "https://i.postimg.cc/W1y1CJV7/casa3.webp"
     },
-
-
     {
-        
         "nombre": "ZADEH",
-        "precio": 541.682,
+        "precio": 50000,
         "ubicacion": "Monteserrín, Quito",
         "tipo": "Casas",
-        "imagen":"https://i.postimg.cc/kGwnc2wr/casa4.jpg"
-
+        "imagen": "https://i.postimg.cc/kGwnc2wr/casa4.jpg"
     },
-
-
     {
-        
         "nombre": "Amira",
-        "precio": 128.558,
+        "precio": 8000,
         "ubicacion": "Amira San Francisco, Quito",
         "tipo": "Departamentos",
-        "imagen":"https://i.postimg.cc/8cb0fW4b/depa1.jpg"
-
+        "imagen": "https://i.postimg.cc/8cb0fW4b/depa1.jpg"
     },
-
     {
-        
         "nombre": "Mozione",
-        "precio": 279.671,
+        "precio": 7000,
         "ubicacion": "Mozione Hidalgo de Pinto, Quito",
         "tipo": "Departamentos",
-        "imagen":"https://i.postimg.cc/Wz7Hqr8n/depa2.webp"
-
+        "imagen": "https://i.postimg.cc/Wz7Hqr8n/depa2.webp"
     },
-
-
-
     {
-        
         "nombre": "Sense",
-        "precio": 192.735,
+        "precio": 6200,
         "ubicacion": "Edificio SENSE",
         "tipo": "Departamentos",
-        "imagen":"https://i.postimg.cc/D0cM4s65/depa3.webp"
-
+        "imagen": "https://i.postimg.cc/D0cM4s65/depa3.webp"
     },
-
-
     {
-        
         "nombre": "QUIARI",
-        "precio": 130.686,
+        "precio": 7500,
         "ubicacion": "QUIARI, San Juan de Cumbayá",
         "tipo": "Departamentos",
-        "imagen":"https://i.postimg.cc/1XKjV6Bv/depa4.webp"
-
+        "imagen": "https://i.postimg.cc/1XKjV6Bv/depa4.webp"
     },
-
     {
-        
         "nombre": "Oficinas Zaigen",
-        "precio": 199.076,
+        "precio": 4000,
         "ubicacion": "Edificio Zaigen",
         "tipo": "Oficinas",
-        "imagen":"https://i.postimg.cc/XJf2tFR0/ofi1.jpg"
-
+        "imagen": "https://i.postimg.cc/XJf2tFR0/ofi1.jpg"
     },
-
-        {
-        
+    {
         "nombre": "Oficinas en La Carolina",
-        "precio": 90.594,
+        "precio": 5700,
         "ubicacion": "Centro Norte de Quito",
         "tipo": "Oficinas",
-        "imagen":"https://i.postimg.cc/tRzS53dW/ofi2.webp"
-
+        "imagen": "https://i.postimg.cc/tRzS53dW/ofi2.webp"
     },
-
-            {
-        
+    {
         "nombre": "Prados del Llano",
-        "precio": 79.493,
+        "precio": 9000,
         "ubicacion": "Prados del Llano",
         "tipo": "Lotes",
-        "imagen":"https://i.postimg.cc/vZC3B3yJ/lote1.jpg"
-
+        "imagen": "https://i.postimg.cc/vZC3B3yJ/lote1.jpg"
     },
-
-                {
-        
+    {
         "nombre": "Zibâ",
-        "precio": 224.107,
+        "precio": 7500,
         "ubicacion": "Calle Humberto Fierro S5-110, Cumbaya",
         "tipo": "Departamentos",
-        "imagen":"https://i.postimg.cc/t482T2y0/depa5.webp"
-
+        "imagen": "https://i.postimg.cc/t482T2y0/depa5.webp"
     }
-
-
-] 
+]
