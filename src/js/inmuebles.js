@@ -50,7 +50,7 @@ const cargarTienda = async ()=>{
                             <button 
                                 data-titulo="${inmuebles.nombre}" 
                                 data-precio="${inmuebles.precio}"
-                                class="btn-agregar group/btn flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-all active:scale-95">
+                                class="btn-reservar group/btn flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-all active:scale-95">
                                 <span>Reservar</span>
                                 <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </button>
@@ -72,33 +72,33 @@ cargarTienda();
 
 //localStore
 //Intetar recuperar los libros elegidos por el usuario
-let carrito = JSON.parse(localStorage.getItem("contededor_libros"))||[];
+let reserva = JSON.parse(localStorage.getItem("contededor-inmuebles"))||[];
 //Funcion para actualizar el carrito
 const actualizarContador = ()=>{ 
-const contador = document.getElementById("carrito_contador")
+const contador = document.getElementById("carrito-contador")
 //si exiate el contador
-if(contador) contador.innerText=carrito.length;
+if(contador) contador.innerText=reserva.length;
 };
 
 contenedor.addEventListener("click", (e)=>{ 
-    const boton = e.target.closest(".btn-agregar");
+    const boton = e.target.closest(".btn-reservar");
 
     if (boton){
-        const title= boton.dataset.titulo;
+        const name= boton.dataset.nombre;
         const price= boton.dataset.precio;
 
         //Crear un objeto
-    const libro = { 
-        titulo:title, precio:price
+    const inmueble = { 
+        nombre:name, precio:price
     };
 
 
         //agregar al carrito
-    carrito.push(libro);
+    reserva.push(inmueble);
 
     
 
-    localStorage.setItem("carrito_libros", JSON.stringify(carrito));
+    localStorage.setItem("contededor-inmuebles", JSON.stringify(reserva));
     actualizarContador();
     }
 

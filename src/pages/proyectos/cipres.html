@@ -9,7 +9,7 @@
   </head>
   <body>
 
-  <!--NAVBAR-->
+    <!--NAVBAR-->
   <div class="bg-white" id="top_page">
   <header class="bg-[#1a1a1a] fixed top-0 w-full z-50">
     <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between lg:justify-center lg:gap-x-24 p-4 lg:px-8">
@@ -28,10 +28,10 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="/index.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" target="_blank">INICIO</a>
-        <a href="/src/pages/quienes_somos.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" target="_blank">QUIÉNES SOMOS</a>
+        <a href="/index.html" class="text-sm/6 font-Montserrat font-bold text-blue-600 hover:font-semibold" >INICIO</a>
+        <a href="/src/pages/quienes_somos.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" >QUIÉNES SOMOS</a>
         <div class="relative flex items-center"> <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" 
-        class="flex items-center gap-1 text-sm/6 font-Montserrat font-bold text-blue-600 hover:font-bol bg-transparent border-none p-0 focus:outline-none" type="button">
+        class="flex items-center gap-1 text-sm/6 font-Montserrat text-white hover:font-semibold bg-transparent border-none p-0 focus:outline-none" type="button">
             PROYECTOS 
             <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -41,16 +41,16 @@
         <div id="dropdownDelay" class="z-10 hidden bg-[#1a1a1a] divide-y divide-gray-100 rounded-lg shadow w-44">
             <ul class="py-2 text-sm text-white" aria-labelledby="dropdownDelayButton">
                 <li>
-                    <a href="/src/pages/proyectos/cipres.html" class="block px-4 py-2 font-bold text-blue-600 hover:font-semibold">CIPRÉS</a>
+                    <a href="/src/pages/proyectos/cipres.html" class="block px-4 py-2 text-white hover:font-semibold">CIPRÉS</a>
                 </li>
                 <li>
-                    <a href="/src/pages/proyectos/villa_ventura.html" class="block px-4 py-2 hover:font-semibold" target="_blank">VILLA AVENTURA</a>
+                    <a href="/src/pages/proyectos/villa_ventura.html" class="block px-4 py-2 hover:font-semibold" >VILLA AVENTURA</a>
                 </li>
             </ul>
         </div>
     </div>
-      <a href="/src/pages/inmuebles_venta.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" target="_blank">INMUEBLES EN VENTA</a>
-        <a href="/src/pages/contacto.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" target="_blank">CONTACTO</a>
+        <a href="/src/pages/inmuebles_venta.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold">INMUEBLES EN VENTA</a>
+        <a href="/src/pages/contacto.html" class="text-sm/6 font-Montserrat text-white hover:font-semibold" >CONTACTO</a>
       </div>
     </nav>
     <el-dialog>
@@ -65,23 +65,23 @@
               <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
                 <span class="sr-only">Cerrar Menu</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
             </div>
             <div class="mt-6 flow-root border-t-2 py-2">
               <div class="-my-6 divide-y divide-white/10">
                 <div class="space-y-2 py-6">
-                  <a href="/index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">INICIO</a>
+                  <a href="/index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold text-blue-600 hover:bg-white/5">INICIO</a>
                   <a href="/src/pages/quienes_somos.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">QUIÉNES SOMOS</a>
                   <div class="-mx-3">
-                    <button type="button" onclick="document.getElementById('mobile-projects-list').classList.toggle('hidden')" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-bold text-blue-600 hover:bg-white/5">PROYECTOS                      
+                    <button type="button" onclick="document.getElementById('mobile-projects-list').classList.toggle('hidden')" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 font-semibold text-white pr-3.5 text-base/7 hover:bg-white/5">PROYECTOS                     
                 <svg class="h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                 </svg>
               </button>
               <div id="mobile-projects-list" class="mt-2 space-y-2 hidden">
-                <a href="/src/pages/proyectos/cipres.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-bold text-blue-600 hover:text-white hover:bg-white/5">CIPRÉS
+                <a href="/src/pages/proyectos/cipres.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm text-white hover:text-white hover:bg-white/5">CIPRÉS
                 </a>
                 <a href="/src/pages/proyectos/villa_ventura.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5">VILLA AVENTURA
                 </a>
@@ -97,146 +97,7 @@
       </dialog>
     </el-dialog>
   </header>
-
-  <main>
-  <div class="min-h-screen flex items-center justify-center bg-gray-50 p-8">
-    <article class="w-full max-w-[740px] text-left">
-      <h1 class="text-5xl font-bold pb-4 pt-20 mt-10">Ciprés Residencias</h1>
-      <h2 class="text-xl mb-4">Goza de tranquilidad, buen clima y naturaleza</h2> 
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-    <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-base md:h-96">
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://i.postimg.cc/J0P39vF8/cipress1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Foto de casa">
-        </div>
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://i.postimg.cc/WzXmQCyP/cipress2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Foto de casa">
-        </div>
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://i.postimg.cc/hvp8H6YR/cipress3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Foto de interior de casa">
-        </div>
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://i.postimg.cc/660h24p3/cipress4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Foto interior de casa">
-        </div>
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://i.postimg.cc/NG4x92jF/cipress5.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Foto interior de casa">
-        </div>
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://i.postimg.cc/VsRFr0kJ/cipress6.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Foto de piscina">
-        </div>
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://i.postimg.cc/8kHbJfzF/cipress7.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Foto aerea de casa">
-        </div>
-    </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-base" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    </div>
-    <!-- Slider controls -->
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
 </div>
-    <h3 class="text-3xl font-bold pt-4">Ubicación</h3>
-    <ul class="list-disc pl-5 pt-5 space-y-2">
-      <li>Ubicadas en el mejor sector de Tumbaco.</li>
-      <li>A pocos minutos de la Ruta Viva.</li>
-      <li>Muy Cerca de la Av. Interoceánica.</li>
-      <li>Calle Gaspar de Carvajal y De Los Cipreses</li>
-      <li>Contactos: 099 803 4348 / 099 852 2005</li>
-    </ul>
-
-    <div class="w-full max-w-[740px] mx-auto pt-5 pb-5">
-    <div class="relative w-full aspect-[740/420] overflow-hidden rounded-base shadow-lg bg-gray-200">
-        <iframe class="absolute top-0 left-0 w-full h-full border-0"src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1186.171454669958!2d-78.4055737022994!3d-0.2185442043770675!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5914ac0620593%3A0x34db81b0416a0da3!2sHacienda%20Cochabamba!5e0!3m2!1ses!2sus!4v1768690781977!5m2!1ses!2sus"width="740" height="420" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
-    </div>
-    </div>
-
-    <h3 class="text-3xl font-bold pt-4">Características del proyecto</h3>
-    <ul class="list-disc pl-5 pt-5 space-y-2">
-      <li>Exclusivo conjunto de 15 casas.</li>
-      <li>Casas completamente independientes.</li>
-      <li>Distribución interna a tu medida.</li>
-      <li>3 Dormitorios más sala de estar/estudio.</li>
-      <li>2 parqueos cubiertos por casa.</li>
-      <li>Amplios jardines en todas las viviendas.</li>
-      <li>Increíbles áreas comunales: piscina, áreas de juegos para niños, amplios espacios verdes, área de BBQ con pérgola, salón comunal de copropietarios, guardianía 24 horas y más.</li>
-    </ul>
-
-    <h3 class="text-3xl font-bold pt-4 text-center pb-4">Aprovecha los precios de lanzamiento</h3>
-    <div class="w-full max-w-[740px] mx-auto">
-    <div class="relative w-full aspect-video overflow-hidden  shadow-lg">
-        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/O6HS5FecSJc?si=vPvUhK3SLuoyq6To" title="Cipress Proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>     
-    </div>
-
-    <div>
-      <h3 class="text-3xl font-bold pt-4">Unidades y Planos</h3>
-      <h2 class="text-2xl font-bold pt-4">Casa tipo 1</h2>
-      <ul class="list-disc pl-5 pt-5 space-y-2">
-        <li><strong>Área Total:</strong> 227,02 m²</li>
-        <li><strong>Área Casa:</strong> 156,22 m²</li>
-        <li><strong>Área 2 parqueos cubiertos:</strong> 28,80 m²</li>
-        <li><strong>Área jardines:</strong> 42,00 m²</li>
-        <li><strong>Precio especial de Lanzamiento:</strong> $209.334,80</li>
-      </ul>
-      <div class="group relative overflow-hidden">
-        <img class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="https://i.postimg.cc/tJ2dLwML/casa-tipo1.jpg" alt="planos casa tipo 1">
-      </div>
-
-      <h2 class="text-2xl font-bold pt-4">Casa tipo 2 - Esquinera</h2>
-      <ul class="list-disc pl-5 pt-5 space-y-2">
-        <li><strong>Área Total:</strong> 252,25 m²</li>
-        <li><strong>Área Casa:</strong> 150,95 m²</li>
-        <li><strong>Área 2 parqueos cubiertos:</strong> 28,80 m²</li>
-        <li><strong>Área jardines:</strong> 72,50 m²</li>
-        <li><strong>Precio especial de Lanzamiento:</strong> $205.292</li>
-      </ul>
-      <div class="group relative overflow-hidden">
-        <img class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="https://i.postimg.cc/vT37pkKF/casa-tipo2.jpg" alt="planos casa tipo 2">
-      </div>
-      <p>3 Dormitorios - 3 y medio baños - Sala de estar / Estudio - Sala - Comedor - Cocina - Jardín Posterior - 2 Parqueaderos Cubiertos</p>
-    </div>
-
-    <h3 class="text-3xl font-bold pt-4">Forma de pago:</h3>
-    <ul class="list-disc pl-5 pt-5 space-y-2">
-      <li>Reserva $2.000.</li>
-      <li>10% de entrada.</li>
-      <li>20% en cuotas durante la construcción.</li>
-      <li>70% financiado con institución bancaria o financiera.</li>
-    </ul>
-
-<div class="bg-[#1a1a1a] block w-full max-w-[740px] p-6 border border-default rounded-base shadow-xs mx-auto mt-10 flex-col items-center text-center">
-    <p class="text-body mb-6 text-white">SOLICITE MAS INFORMACIÓN DE NUESTRO PROYECTO</p>
-    <a href="/src/pages/contacto.html" class="inline-flex items-center text-black bg-white box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" target="_blank" id="btn-contacto">
-        CONTACTO
-        <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
-    </a>
-</div>
-</main>
-
-    </article>
-  </div>
-
   <!--Boton volver arriba-->
   <button 
     type="button" 
