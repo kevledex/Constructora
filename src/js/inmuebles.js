@@ -95,6 +95,7 @@ const actualizarContador = ()=>{
     if(contador) contador.innerText=reserva.length;
 };
 
+
 contenedor.addEventListener("click", (e)=>{ 
     const boton = e.target.closest(".btn-reservar");
 
@@ -110,7 +111,7 @@ contenedor.addEventListener("click", (e)=>{
         };
 
         
-        let reserva = JSON.parse(localStorage.getItem("contededor-inmuebles")) || [];
+        reserva = JSON.parse(localStorage.getItem("contededor-inmuebles")) || [];
         const verificarC = reserva.some(item => item.nombre === inmueble.nombre);
         if(!verificarC){
             reserva.push(inmueble);
@@ -142,12 +143,16 @@ actualizarContador();
 window.addEventListener('storage', (e) => {
     if (e.key === 'contededor-inmuebles' || e.key === 'inmuebles-vendidos') {
         cargarTienda();
+        actualizarContador();
     }
 });
 
 window.addEventListener('inmuebles_actualizar', () => {
     cargarTienda();
+    actualizarContador();
 });
+
+
 
 //Boton volver arriba
 const botonirArriba = document.getElementById("btn-volver-arriba");
