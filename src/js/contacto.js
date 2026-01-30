@@ -75,7 +75,7 @@ formulario.addEventListener("submit", (e) => {
         eliminarError(mensaje, "error-mensaje");
     }
     if(formularioValido){
-        alert("${nombre.value}, tu formulario ha sido enviado!");
+        alert(`${nombre.value}, tu formulario ha sido enviado!`);
         //limpiar los inputs
         formulario.reset();
     } else {
