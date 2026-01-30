@@ -3,33 +3,42 @@ import 'flowbite';
 
 const contenedor = document.getElementById("contededor-inmuebles")
 
-//Funcion para cargar los libros- Funcion asincrona
-
-const cargarTienda = async ()=>{
+// Funcion para cargar los inmuebles-funcion asincrona
+const cargarTienda = async ()=> {
     try{
         const respuesta = await fetch("/data/inmuebles.json")
-        //verificar si la repsuesta fue exitosa
+
         if(!respuesta.ok) throw new Error("Error en la red")
-        //Convertir el cuepo de la respuesta a un objeto json que sepueda usar
+
         const datos = await respuesta.json();
 
-        const inmueblesVendidos = JSON.parse(localStorage.getItem("inmuebles-vendidos")) || [];
+        // constantes para bloquear los inmubles ya rervados
+        const inmueblesReservados = JSON.parse(localStorage.getItem("inmuebles-vendidos")) || [];
+        const reservaCarrito = JSON.parse(localStorage.getItem("contededor-inmuebles")) || [];
+
         contenedor.innerHTML = "";
         
         datos.forEach((inmuebles) => {
-            //verificar si el inmubele se vendio
-            const esVendido = inmueblesVendidos.includes(inmuebles.nombre);
+
+            const esVendido = inmueblesReservados.includes(inmuebles.nombre);
+            const enCarrito = reservaCarrito.some(item => item.nombre === inmuebles.nombre);
+
             const botonHTML = esVendido
             ? `<button disabled class="flex items-center gap-2 bg-gray-500 text-gray-200 px-4 py-2 rounded-lg font-bold cursor-not-allowed w-64 justify-center">
-                     <span>Reservado</span>
-                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                   </button>`:
-                   `<button data-nombre="${inmuebles.nombre}" data-precio="${inmuebles.precio}"data-imagen="${inmuebles.imagen}" data-ubicacion="${inmuebles.ubicacion}" 
-                data-tipo="${inmuebles.tipo}"
+                    <span>Reservado</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+               </button>`
+            : (enCarrito
+                ? `<button disabled class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold cursor-not-allowed w-64 justify-center">
+                        <span>En carrito</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                   </button>`
+                : `<button data-nombre="${inmuebles.nombre}" data-precio="${inmuebles.precio}" data-imagen="${inmuebles.imagen}" data-ubicacion="${inmuebles.ubicacion}" 
+                    data-tipo="${inmuebles.tipo}"
                         class="btn-reservar group/btn flex items-center justify-center gap-2 bg-white text-black px-4 py-2 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-all active:scale-95 w-64">
                         <span>Reservar</span>
                         <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                   </button>`;
+                   </button>`);
 
             contenedor.innerHTML += `
                 <article class="group relative bg-[#242424] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 transition-all duration-300 border border-gray-800 flex flex-col h-full ${esVendido ? 'opacity-70 grayscale' : ''}">
@@ -79,11 +88,11 @@ cargarTienda();
 
 //Intentar recuperar los libros elegidos por el usuario
 let reserva = JSON.parse(localStorage.getItem("contededor-inmuebles"))||[];
+
 //Funcion para actualizar el carrito
 const actualizarContador = ()=>{ 
-const contador = document.getElementById("carrito-contador")
-//si exiate el contador
-if(contador) contador.innerText=reserva.length;
+    const contador = document.getElementById("carrito-contador")
+    if(contador) contador.innerText=reserva.length;
 };
 
 contenedor.addEventListener("click", (e)=>{ 
@@ -96,22 +105,49 @@ contenedor.addEventListener("click", (e)=>{
         const location = boton.dataset.ubicacion;
         const type = boton.dataset.tipo;
         
-        //Crear un objeto
-    const inmueble = { 
-        nombre: name, precio: price, imagen: image, ubicacion: location, tipo: type
-    };
-        //agregar al carrito
-    reserva.push(inmueble);
+        const inmueble = { 
+            nombre: name, precio: price, imagen: image, ubicacion: location, tipo: type
+        };
 
-    localStorage.setItem("contededor-inmuebles", JSON.stringify(reserva));
-    actualizarContador();
+        
+        let reserva = JSON.parse(localStorage.getItem("contededor-inmuebles")) || [];
+        const verificarC = reserva.some(item => item.nombre === inmueble.nombre);
+        if(!verificarC){
+            reserva.push(inmueble);
+            localStorage.setItem("contededor-inmuebles", JSON.stringify(reserva));
+            actualizarContador();
 
-    alert("Inmueble agregado al carrito!");
+            // Actualizar el botón cuando ya esta reservado
+            boton.disabled = true;
+            boton.classList.remove("bg-white","text-black","hover:bg-blue-600","hover:text-white");
+            boton.classList.add("bg-blue-600","text-black","cursor-not-allowed");
+            boton.innerHTML = `<span>En carrito</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>`;
+
+            alert("Inmueble agregado al carrito!");
+            
+            window.dispatchEvent(new Event('inmuebles_actualizar'));
+            
+        } else {
+            alert("Inmueble agregado al carrito!");
+        } 
     }
 
 });
 
 actualizarContador();
+
+//Eventos para actualizar las pagina, ya que estan en la misma pestaña
+
+window.addEventListener('storage', (e) => {
+    if (e.key === 'contededor-inmuebles' || e.key === 'inmuebles-vendidos') {
+        cargarTienda();
+    }
+});
+
+window.addEventListener('inmuebles_actualizar', () => {
+    cargarTienda();
+});
 
 //Boton volver arriba
 const botonirArriba = document.getElementById("btn-volver-arriba");

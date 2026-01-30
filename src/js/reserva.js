@@ -4,10 +4,10 @@ import 'flowbite';
 const lista = document.getElementById("lista-carrito");
 const totalPago = document.getElementById("total-compra");
 const limpiar = document.getElementById("btn-vaciar");
-// Botón scroll (verifica que en reserva.html tengas un botón con este ID, si no, bórralo abajo)
+// Botón de desplazamiento
 const btnScroll = document.getElementById("btn-scroll-top"); 
 
-// Traer la información (Mismo nombre de clave "contededor-inmuebles")
+// Traer la información 
 let reserva = JSON.parse(localStorage.getItem("contededor-inmuebles")) || [];
 
 const actualizarContador = () => {
@@ -19,7 +19,6 @@ const mostrarReserva = () => {
     lista.innerHTML = "";
     let total = 0;
 
-    //so esta vacio
     if (reserva.length === 0) {
         lista.innerHTML = `
             <div class="flex flex-col items-center justify-center py-10 opacity-60">
@@ -87,6 +86,9 @@ lista.addEventListener("click", (e) => {
         reserva.splice(index, 1);
         localStorage.setItem("contededor-inmuebles", JSON.stringify(reserva));
         mostrarReserva();
+
+        //Actiualizar la pagina de inmubles cuando se elimine o vacie el carrito 
+        window.dispatchEvent(new Event('inmuebles_actualizar'));
     }
 });
 
@@ -94,7 +96,11 @@ limpiar.addEventListener("click", () => {
     reserva = [];
     localStorage.setItem("contededor-inmuebles", JSON.stringify(reserva));
     mostrarReserva();
+
+    //Actiualizar la pagina de inmubles cuando se reserva el inmueble
+    window.dispatchEvent(new Event('inmuebles_actualizar'));
 });
+
 mostrarReserva();
 
 const btnConfirmar = document.getElementById("btn-confirmar");
@@ -117,6 +123,10 @@ if (btnConfirmar) {
         localStorage.setItem("contededor-inmuebles", JSON.stringify(reserva));
         
         mostrarReserva();
+
+        //Actualizar a la página de inmuebles que bloquar los inmuebles y ponelos en gris
+        window.dispatchEvent(new Event('inmuebles_actualizar'));
+
         alert("Cita confirmada con exito!");
     });
 }
